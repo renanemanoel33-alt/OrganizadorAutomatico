@@ -17,4 +17,8 @@ def organizar(organizador):
                 if not os.path.exists(f'{pain}/{pasta}'):
                     os.mkdir(f'{pain}/{pasta}')
                 os.rename(f'{pain}/{arquivo}',f'{pain}/{pasta}/{arquivo}')
-organizar('organizador')
+
+try:
+    organizar('organizador')
+except Exception as e:
+    print(f'Erro ao organizar arquivos: {e}')
